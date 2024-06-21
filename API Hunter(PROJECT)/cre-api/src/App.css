@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+
+}
+
+.main{
+  width: 500px;
+  height: 500px;
+  /* border: 1px solid black; */
+  margin-left: 35%;
+  margin-top: 20px;
+}
