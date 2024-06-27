@@ -32,16 +32,20 @@ body{
 }
 
 .signin-form button {
-  background-color: #4CAF50;
+  /* background-color: #4CAF50; */
+  background-color: black;
   color: white;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .signin-form button:hover {
-  background-color: #45a049;
+  background-color: rgb(27, 26, 26);
 }
 
 /* Optional: Centering the form vertically */
@@ -53,4 +57,7 @@ body{
 
 }
 
+.gicon{
 
+  font-size: 18px;
+}

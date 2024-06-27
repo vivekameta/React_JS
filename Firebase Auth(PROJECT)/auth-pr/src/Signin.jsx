@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { signInWithPopup, signInWithEmailAndPassword } from "firebase/auth";
 import { auth, provider } from './Config';
 import Home from './Home';
+import { FcGoogle } from "react-icons/fc";
 
 function Signin() {
   const [value, setValue] = useState("");
@@ -71,7 +72,7 @@ function Signin() {
                 required 
               />
             </div>
-            <button onClick={handleSignIn}>Sign in with Google</button>
+            <button onClick={handleSignIn}> <FcGoogle className='gicon'/> &nbsp;&nbsp; Sign in with Google</button>
           </form>
         </div>
       )}
