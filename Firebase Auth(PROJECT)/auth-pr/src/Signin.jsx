@@ -44,14 +44,16 @@ function Signin() {
   }, []);
 
   return (
-    <div>
+    <div >
       {value ? (
         <Home onSignOut={handleSignOut} />
       ) : (
-        <div>
+        <div className='signin-container'>
         
-          <form onSubmit={handleEmailPasswordSignIn}>
+          <form  className='signin-form' onSubmit={handleEmailPasswordSignIn}>
             <div>
+          <h1>Sign In</h1>
+
               <label>Email:</label>
               <input 
                 type="email" 
