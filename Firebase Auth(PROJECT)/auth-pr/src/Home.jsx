@@ -4,7 +4,7 @@ import { getAuth, signOut } from "firebase/auth";
 import './Home.css';
 
 
-function Home({ onSignOut }) {
+function Home({ onSignOut ,ans , pic ,em}) {
   const handleSignOut = () => {
     const auth = getAuth();
     signOut(auth)
@@ -29,7 +29,15 @@ function Home({ onSignOut }) {
     <div className='body'>
     <div className="home-container">
       <h1>Welcome Back!</h1>
-      <p>You are signed in.</p>
+      <br />
+    
+      <img src={pic} alt="" style={{borderRadius:"60px"}}/> <br /> 
+      {/* <a href="">{em}</a> */}
+      <h3 style={{color:"blue"}} >{em}</h3>
+
+
+      <p>{ans} are signed in.</p>
+
       <button onClick={handleSignOut} className="sign-out-button">Sign out</button>
     </div>
     </div>

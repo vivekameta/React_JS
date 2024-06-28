@@ -12,8 +12,9 @@ function Signin() {
   const handleSignIn = () => {
     signInWithPopup(auth, provider)
       .then((data) => {
-        setValue(data.user.email);
+        setValue(data.user);
         localStorage.setItem("email", data.user.email);
+        console.log(data.user)
       })
       .catch((error) => {
         console.error("Error during sign-in:", error);
@@ -44,10 +45,16 @@ function Signin() {
     }
   }, []);
 
+  console.log(value.displayName)
+
   return (
     <div >
       {value ? (
-        <Home onSignOut={handleSignOut} />
+       <>
+          <Home onSignOut={handleSignOut} ans={value.displayName} pic={value.photoURL} em={value.email}/>
+         
+       </>
+     
       ) : (
         <div className='signin-container'>
         
